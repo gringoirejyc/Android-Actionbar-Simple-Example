@@ -9,9 +9,10 @@
         app:actionViewClass="android.support.v7.widget.SearchView" />
 
 
-    <item android:id="@+id/action_share"
+    <item android:id="@+id/action_sharre"
         android:title="sharre"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom|collapseActionView"
+
         app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
 
     <item

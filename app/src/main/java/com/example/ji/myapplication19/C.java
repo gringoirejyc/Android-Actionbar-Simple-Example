@@ -38,6 +38,28 @@ public class C extends AppCompatActivity {
 
         MenuItem searchitem = menu.findItem(R.id.action_search1);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchitem);
+
+        // Define the listener
+        MenuItemCompat.OnActionExpandListener expandListener = new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                // Do something when action item collapses
+                return true;  // Return true to collapse action view
+            }
+
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                // Do something when expanded
+                return true;  // Return true to expand action view
+            }
+        };
+
+        // Get the MenuItem for the action item
+        MenuItem actionMenuItem = menu.findItem(R.id.action_sharre);
+
+        MenuItemCompat.setOnActionExpandListener(actionMenuItem, expandListener);
+
+        // Assign the listener to that action item
         return super.onCreateOptionsMenu(menu);
     }
 
