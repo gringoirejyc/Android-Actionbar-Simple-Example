@@ -9,7 +9,22 @@
         android:title="@string/abc_search_hint"
         android:icon="@drawable/ic_search_white_36dp"
         app:showAsAction="ifRoom|collapseActionView"
-        android:actionViewClass="android.support.v7.widget.SearchView" />
+        android:orderInCategory="100"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+    <item
+        android:id="@+id/action_show_snack"
+        android:title="show snack"
+        app:showAsAction="always"
+        android:orderInCategory="99" />
+
+    <item android:id="@+id/action_websearch"
+        android:icon="@drawable/action_search"
+        android:title="@string/action_websearch"
+        app:showAsAction="never" />
+
+
+
 
 
 </menu>

@@ -12,7 +12,6 @@
     <item android:id="@+id/action_sharre"
         android:title="sharre"
         app:showAsAction="ifRoom|collapseActionView"
-
         app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
 
     <item
