@@ -64,9 +64,13 @@ public class MainActivity extends AppCompatActivity{
 
         getSupportActionBar().setHomeButtonEnabled(true);
 
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.rsz_ic_list_white_48dp);
+
+     //   mDrawerToggle.setHomeAsUpIndicator(R.drawable.ic_list_white_48dp);
+
         mDrawerToggle = new ActionBarDrawerToggle(this,
                                                   mDrawerLayout,
-                                                  R.drawable.ic_drawer,
+                                                  R.drawable.ic_list_white_48dp,
                                                   R.string.drawer_open,
                                                   R.string.drawer_close) {
 
