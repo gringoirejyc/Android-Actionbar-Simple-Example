@@ -7,16 +7,16 @@
     <style name="search">HAE</style>
 
     <string-array name="navigation_array">
-        <item>J1</item>
-        <item>J2</item>
-        <item>J3</item>
-        <item>J4</item>
+        <item>My request list</item>
+        <item>Made a new request</item>
+        <item>Draft</item>
+        <item>Personal Info</item>
         <item>J5</item>
-        <item>J6</item>
     </string-array>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="action_websearch">Web search</string>
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="title_activity_new__request">New_Request</string>
 </resources>

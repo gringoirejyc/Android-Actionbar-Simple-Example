@@ -19,6 +19,7 @@ import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -49,8 +50,9 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //  Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //  setSupportActionBar(myToolbar);
+          Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+          setSupportActionBar(myToolbar);
+
         mTitle = mDrawerTitle = getTitle();
         NavigationArrayTitles = getResources().getStringArray(R.array.navigation_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
