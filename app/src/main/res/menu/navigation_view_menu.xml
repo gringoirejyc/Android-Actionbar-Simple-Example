@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home"
+            android:checked="true"
+            android:icon="@drawable/ic_home_white_36dp"
+            android:title="Home"
+            />
+
+        <item
+            android:id="@+id/drawer_favourite"
+            android:icon="@drawable/ic_favorite_border_black_36dp"
+            android:title="Favorite"/>
+
+
+        <item
+            android:id="@+id/drawer_settings"
+            android:icon="@drawable/ic_settings_applications_white_36dp"
+            android:title="Setting"/>
+
+
+        <item android:title="sub 1">
+            <menu>
+                <item
+                    android:id="@+id/drawer_favourite_sub1"
+                    android:icon="@drawable/ic_favorite_border_black_36dp"
+                    android:title="Favorite"/>
+
+                <item
+                    android:id="@+id/drawer_favourite_sub2"
+                    android:icon="@drawable/ic_favorite_border_black_36dp"
+                    android:title="Favorite"/>
+
+            </menu>
+        </item>
+    </group>
+
+</menu>

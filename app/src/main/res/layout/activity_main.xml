@@ -28,17 +28,11 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:minHeight="?attr/actionBarSize"
-                android:background="#2196F3"
+                android:background="#E91E63"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 android:visibility="visible"/>
 
-            <View
-                android:id="@+id/appbar_bottom"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/transparent"
-                android:visibility="invisible"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -47,10 +41,6 @@
                 android:id="@+id/button"
                 android:layout_gravity="center"
                 android:onClick="go"/>
-
-
-
-
 
         </LinearLayout>
         <!-- The navigation drawer -->
@@ -63,7 +53,7 @@
             android:choiceMode="singleChoice"
             android:divider="#FFFFFF"
             android:dividerHeight="0dp"
-            android:background="#0288D1"
+            android:background="#FFFFFF"
             android:fitsSystemWindows="true"
             />
 

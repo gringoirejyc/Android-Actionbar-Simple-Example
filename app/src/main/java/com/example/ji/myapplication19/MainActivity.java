@@ -152,6 +152,8 @@ public class MainActivity extends AppCompatActivity{
         if (id == R.id.action_show_snack){
             Snackbar snackbar = Snackbar.make(getWindow().getDecorView(),"Hallo,i am snackbar",Snackbar.LENGTH_LONG);
             snackbar.show();
+            Intent intent = new Intent(this,C.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
