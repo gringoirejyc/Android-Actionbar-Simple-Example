@@ -16,10 +16,15 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
         <!-- The main content view -->
-        <LinearLayout
-            android:id="@+id/content_frame"
+        <FrameLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
+
+            <FrameLayout
+                android:id="@+id/fragment0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
 
 
@@ -42,7 +47,7 @@
                 android:layout_gravity="center"
                 android:onClick="go"/>
 
-        </LinearLayout>
+        </FrameLayout>
         <!-- The navigation drawer -->
 
 

@@ -11,12 +11,11 @@
     >
 
     <ImageView
-
         android:id="@+id/avatar"
         android:layout_width="64dp"
         android:layout_height="128dp"
-
         android:elevation="4dp"
+        android:layout_margin="4dp"
         tools:src="@drawable/ic_llauncher"
         />
 
@@ -25,7 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/email"
-
+        android:layout_margin="16dp"
+        android:layout_marginLeft="16dp"
         android:textColor="#FFFFFF"
         android:text="Username"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
@@ -34,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-
+        android:layout_margin="16dp"
+        android:layout_marginLeft="16dp"
         android:text="username@mymail.com"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 

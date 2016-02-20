@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity{
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.content_frame, fragment)
+                .replace(R.id.fragment, fragment)
                 .commit();
 
         // Highlight the selected item, update the title, and close the drawer

@@ -1,8 +1,11 @@
 package com.example.ji.myapplication19;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,7 +21,8 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-;
+
+import com.example.ji.myapplication19.InboxFragment;
 
 
 public class C extends AppCompatActivity {
@@ -86,19 +90,20 @@ public class C extends AppCompatActivity {
 
         NavigationView view = (NavigationView) findViewById(R.id.navigation_view);
 
-        view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Snackbar.make(getWindow().getDecorView(), menuItem.getTitle() + " pressed", Snackbar.LENGTH_LONG).show();
-                menuItem.setChecked(true);
-                drawerLayout.closeDrawers();
-                return true;
-            }
-        });
+        if (view != null) {
+            setupNavigationDrawerContent(view);
+        }
+
+        setupNavigationDrawerContent(view);
+
+        //First start (Inbox Fragment)
+        setFragment(0);
 
          mDrawerToggle = new ActionBarDrawerToggle(this,
                                                    drawerLayout,
-                                                   myChildToolbar, R.string.drawer_open,R.string.drawer_close)
+                                                   myChildToolbar,
+                                                   R.string.drawer_open,
+                                                   R.string.drawer_close)
         {
              @Override
              public void onDrawerClosed(View drawerView) {
@@ -146,4 +151,38 @@ public class C extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void setupNavigationDrawerContent(NavigationView navigationView){
+        navigationView.setNavigationItemSelectedListener(
+                        new NavigationView.OnNavigationItemSelectedListener() {
+                            @Override
+                            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                                switch (menuItem.getItemId()) {
+                                    case R.id.drawer_home:
+                                        menuItem.setChecked(true);
+                                        setFragment(0);
+                                        drawerLayout.closeDrawer(GravityCompat.START);
+                                        return true;
+                                }
+                                return true;
+                            }
+                        });
+    }
+
+    public void setFragment(int position) {
+        FragmentManager fragmentManager;
+        FragmentTransaction fragmentTransaction;
+        switch (position) {
+            case 0:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                InboxFragment inboxFragment = new InboxFragment();
+                fragmentTransaction.replace(R.id.fragment,inboxFragment);
+                fragmentTransaction.commit();
+                break;
+
+        }
+    }
 }
+
+

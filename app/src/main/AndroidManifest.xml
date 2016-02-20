@@ -30,10 +30,6 @@
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".New_Request"
-            android:label="@string/title_activity_new__request" >
-        </activity>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
             android:id="@+id/drawer_home"
             android:checked="true"
             android:icon="@drawable/ic_home_white_36dp"
-            android:title="Home"
+            android:title="With listview"
             />
 
         <item
